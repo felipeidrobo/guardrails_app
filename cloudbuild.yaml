@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build',
+      '--build-arg', 'GUARDRAILS_TOKEN=${_GUARDRAILS_TOKEN}',
+      '-t', 'gcr.io/bcp-sofia-78147/guardrail',
+      '.'
+    ]
+
+images:
+  - 'gcr.io/bcp-sofia-78147/guardrail'
